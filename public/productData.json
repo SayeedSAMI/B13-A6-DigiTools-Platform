@@ -1,0 +1,90 @@
+[
+  {
+    "id": 1,
+    "name": "Starter Resume Kit",
+    "description": "Perfect for beginners to create simple professional resumes.",
+    "price": 9,
+    "period": "one-time",
+    "tag": "new",
+    "tagType": "new",
+    "features": ["10+ templates", "Basic customization", "PDF export"],
+    "icon": "📄"
+  },
+  {
+    "id": 2,
+    "name": "Pro Resume Builder",
+    "description": "Advanced resume builder with ATS optimization.",
+    "price": 19,
+    "period": "monthly",
+    "tag": "popular",
+    "tagType": "popular",
+    "features": ["100+ templates", "ATS optimization", "Export to PDF"],
+    "icon": "🚀"
+  },
+  {
+    "id": 3,
+    "name": "Career Boost Pack",
+    "description": "Complete toolkit for job seekers.",
+    "price": 49,
+    "period": "one-time",
+    "tag": "best seller",
+    "tagType": "best",
+    "features": ["Resume + Cover Letter", "LinkedIn optimization", "Interview tips"],
+    "icon": "💼"
+  },
+  {
+    "id": 4,
+    "name": "Portfolio Builder",
+    "description": "Create stunning portfolios easily.",
+    "price": 15,
+    "period": "monthly",
+    "tag": "new",
+    "tagType": "new",
+    "features": ["Custom layouts", "Image gallery", "Live preview"],
+    "icon": "🎨"
+  },
+  {
+    "id": 5,
+    "name": "Freelancer Toolkit",
+    "description": "All tools needed for freelancers.",
+    "price": 29,
+    "period": "monthly",
+    "tag": "popular",
+    "tagType": "popular",
+    "features": ["Invoice generator", "Client tracker", "Analytics dashboard"],
+    "icon": "💻"
+  },
+  {
+    "id": 6,
+    "name": "Interview Prep AI",
+    "description": "AI-powered interview preparation assistant.",
+    "price": 25,
+    "period": "monthly",
+    "tag": "best seller",
+    "tagType": "best",
+    "features": ["Mock interviews", "AI feedback", "Common Q&A bank"],
+    "icon": "🤖"
+  },
+  {
+    "id": 7,
+    "name": "Job Tracker Pro",
+    "description": "Track all your job applications in one place.",
+    "price": 12,
+    "period": "monthly",
+    "tag": "popular",
+    "tagType": "popular",
+    "features": ["Application tracking", "Status updates", "Reminder alerts"],
+    "icon": "📊"
+  },
+  {
+    "id": 8,
+    "name": "Ultimate Career Suite",
+    "description": "All-in-one premium career solution.",
+    "price": 99,
+    "period": "yearly",
+    "tag": "best seller",
+    "tagType": "best",
+    "features": ["All features included", "Priority support", "Advanced analytics"],
+    "icon": "👑"
+  }
+]
