@@ -22,8 +22,7 @@ function App() {
           </p>
         </div>
 
-          <Products></Products>
-
+        <Products></Products>
       </main>
     </div>
   );
