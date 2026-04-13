@@ -1,6 +1,6 @@
 import React from "react";
 
-const Navbar = () => {
+const Navbar = ({ cartCount }) => {
   return (
     <div className="navbar bg-base-100 shadow-sm lg:px-[170px]">
       <div className="navbar-start">
@@ -27,7 +27,7 @@ const Navbar = () => {
             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow font-medium"
           >
             <li>
-              <a >Products</a>
+              <a>Products</a>
             </li>
             <li>
               <a>Features</a>
@@ -43,7 +43,9 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
-        <a className="btn btn-ghost font-extrabold text-3xl bg-linear-to-r from-[#4F39F6] to-[#9514FA] bg-clip-text text-transparent">DigiTools</a>
+        <a className="btn btn-ghost font-extrabold text-3xl bg-linear-to-r from-[#4F39F6] to-[#9514FA] bg-clip-text text-transparent">
+          DigiTools
+        </a>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1 font-medium">
@@ -82,11 +84,13 @@ const Navbar = () => {
                 d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
               />{" "}
             </svg>
-            <span className="badge badge-sm indicator-item">8</span>
+            <span className="badge badge-sm indicator-item">{cartCount}</span>
           </div>
         </div>
         <a className="btn btn-ghost">Login</a>
-        <a className="btn bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white rounded-full">Get Started</a>
+        <a className="btn bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white rounded-full">
+          Get Started
+        </a>
       </div>
     </div>
   );

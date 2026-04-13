@@ -1,25 +1,34 @@
-import React, { use } from "react";
-import Cards from "../../../Ui/Cards";
+import React, { use, useState } from "react";
+import ToggleProductCart from "../toggleProductCart/ToggleProductCart";
 
-const Products = ({ productPromise }) => {
+const Products = ({ productPromise, cartCount, setCartCount }) => {
+  const [toggle, setToggle] = useState("Products");
+
   const productData = use(productPromise);
   //   console.log(productData);
 
   return (
     <div className="text-center">
       <div>
-        <button className="btn bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white rounded-full">
+        <button
+          onClick={() => setToggle("Products")}
+          className={`btn bg-linear-to-r from-[#4F39F6] to-[#9514FA] ${toggle === "Products" ? " text-white" : " btn-ghost bg-clip-text text-transparent"} rounded-full`}
+        >
           Products
         </button>
-        <button className="btn btn-ghost  bg-linear-to-r from-[#4F39F6] to-[#9514FA] bg-clip-text text-transparent  rounded-full">
-          Cart(2)
+        <button
+          onClick={() => setToggle("Cart")}
+          className={`btn  bg-linear-to-r from-[#4F39F6] to-[#9514FA] ${toggle === "Cart" ? " text-white" : " btn-ghost bg-clip-text text-transparent"}  rounded-full`}
+        >
+          Cart({cartCount})
         </button>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 max-w-[1100px] mx-auto my-8 gap-8">
-          {productData.map((data) => (
-            <Cards data={data}></Cards>
-          ))}
-        </div>
+        <ToggleProductCart
+          productData={productData}
+          toggle={toggle}
+          cartCount={cartCount}
+          setCartCount={setCartCount}
+        ></ToggleProductCart>
       </div>
     </div>
   );

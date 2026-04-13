@@ -1,4 +1,4 @@
-import { Suspense } from "react";
+import { Suspense, useState } from "react";
 import "./App.css";
 import Banner from "./components/header/banner/Banner";
 import CounterRating from "./components/header/counter&rating/Counter&Rating";
@@ -12,11 +12,12 @@ const fetchPromise = async () => {
 
 function App() {
   const productPromise = fetchPromise();
+  const [cartCount, setCartCount] = useState(0);
 
   return (
     <div className="font-display">
       <header>
-        <Navbar></Navbar>
+        <Navbar cartCount={cartCount}></Navbar>
         <Banner></Banner>
         <CounterRating></CounterRating>
       </header>
@@ -34,7 +35,11 @@ function App() {
             <span className="loading loading-bars loading-xl flex  mx-auto mb-7"></span>
           }
         >
-          <Products productPromise={productPromise}></Products>
+          <Products
+            productPromise={productPromise}
+            cartCount={cartCount}
+            setCartCount={setCartCount}
+          ></Products>
         </Suspense>
       </main>
     </div>
