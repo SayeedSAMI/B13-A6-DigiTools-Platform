@@ -6,6 +6,7 @@ import Navbar from "./components/header/navbar/Navbar";
 import Products from "./components/main/productsLists/products/Products";
 import GetStarted from "./components/main/getStarted/GetStarted";
 import Pricing from "./components/main/pricing/Pricing";
+import ReadytoTransform from "./components/main/ReadytoTransform/ReadytoTransform";
 
 const fetchPromise = async () => {
   const res = await fetch("/public/productData.json");
@@ -48,6 +49,7 @@ function App() {
 
         <GetStarted></GetStarted>
         <Pricing></Pricing>
+        <ReadytoTransform></ReadytoTransform>
       </main>
     </div>
   );
