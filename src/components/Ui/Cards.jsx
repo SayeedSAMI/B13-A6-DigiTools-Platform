@@ -1,12 +1,14 @@
 import React from "react";
 import { FaCheck } from "react-icons/fa";
 
-const Cards = ({ data, cartCount, setCartCount }) => {
+const Cards = ({ data, cartCount, setCartCount, cartList, setCartList }) => {
   //   console.log(data);
 
   const handleCartCount = () => {
     const newCartCount = cartCount + 1;
     setCartCount(newCartCount);
+
+    setCartList([...cartList, data]);
   };
 
   return (
@@ -31,11 +33,15 @@ const Cards = ({ data, cartCount, setCartCount }) => {
 
         <div className="card-actions  flex flex-col">
           <p className="font-bold text-2xl">
-            $20<span className="font-normal text-xl">/m</span>
+            ${data.price}
+            <span className="font-normal text-xl">/m</span>
           </p>
           <div className="font-semibold">
-            {data.features.map((feature ,index) => (
-              <p key={index} className="text-[#627382] flex gap-1.5 items-center">
+            {data.features.map((feature, index) => (
+              <p
+                key={index}
+                className="text-[#627382] flex gap-1.5 items-center"
+              >
                 <FaCheck color="green" /> {feature}
               </p>
             ))}

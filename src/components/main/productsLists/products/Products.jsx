@@ -7,6 +7,8 @@ const Products = ({ productPromise, cartCount, setCartCount }) => {
   const productData = use(productPromise);
   //   console.log(productData);
 
+  
+
   return (
     <div className="text-center">
       <div>
