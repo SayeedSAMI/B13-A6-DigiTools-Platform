@@ -1,8 +1,23 @@
 import React from "react";
 
-const Cart = ({ cartList }) => {
+const Cart = ({
+  cartList,
+  setCartList,
+  cartCount,
+  setCartCount,
+  totalPrice,
+  setTotalPrice,
+}) => {
+  const handleRemoveFromCart = (d) => {
+    const newCartList = cartList.filter((item) => item.name != d.name);
 
-    
+    setCartList(newCartList);
+    const newCartCount = cartCount - 1;
+    setCartCount(newCartCount);
+
+    const newTotalPrice = totalPrice - d.price;
+    setTotalPrice(newTotalPrice);
+  };
 
   return (
     <div>
@@ -13,13 +28,20 @@ const Cart = ({ cartList }) => {
               <p>{data.icon}</p>
             </span>
             <div className="text-start">
-              <h1 className="card-title font-semibold text-[20px]">{data.name}</h1>
+              <h1 className="card-title font-semibold text-[20px]">
+                {data.name}
+              </h1>
               <p className="font-normal text-[16px] text-[#627382] ">
                 ${data.price}
               </p>
             </div>
           </div>
-          <button className="btn btn-ghost text-red-600">Remove</button>
+          <button
+            onClick={() => handleRemoveFromCart(data)}
+            className="btn btn-ghost text-red-600"
+          >
+            Remove
+          </button>
         </div>
       ))}
     </div>

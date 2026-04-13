@@ -1,14 +1,30 @@
 import React from "react";
 import { FaCheck } from "react-icons/fa";
 
-const Cards = ({ data, cartCount, setCartCount, cartList, setCartList }) => {
+const Cards = ({
+  data,
+  cartCount,
+  setCartCount,
+  cartList,
+  setCartList,
+  totalPrice,
+  setTotalPrice,
+}) => {
   //   console.log(data);
 
   const handleCartCount = () => {
-    const newCartCount = cartCount + 1;
-    setCartCount(newCartCount);
+    const exists = cartList.find((item) => item.name === data.name);
 
-    setCartList([...cartList, data]);
+    if (!exists) {
+      const newCartCount = cartCount + 1;
+      setCartCount(newCartCount);
+
+      const newCartList = cartList.filter((item) => item.name != data.name);
+
+      setCartList([...newCartList, data]);
+      const newTotalPrice = totalPrice + data.price;
+      setTotalPrice(newTotalPrice);
+    }
   };
 
   return (

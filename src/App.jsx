@@ -32,7 +32,9 @@ function App() {
         </div>
         <Suspense
           fallback={
-            <span className="loading loading-bars loading-xl flex  mx-auto mb-7"></span>
+            <div className="max-w-[1120px] h-[200px] mx-auto flex flex-col justify-center items-center text-center shadow-xl rounded-xl mb-[100px]">
+              <span className="loading loading-bars loading-xl flex  mx-auto mb-7"></span>
+            </div>
           }
         >
           <Products
