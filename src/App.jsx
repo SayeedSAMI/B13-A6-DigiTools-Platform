@@ -4,6 +4,8 @@ import Banner from "./components/header/banner/Banner";
 import CounterRating from "./components/header/counter&rating/Counter&Rating";
 import Navbar from "./components/header/navbar/Navbar";
 import Products from "./components/main/productsLists/products/Products";
+import GetStarted from "./components/main/getStarted/GetStarted";
+import Pricing from "./components/main/pricing/Pricing";
 
 const fetchPromise = async () => {
   const res = await fetch("/public/productData.json");
@@ -43,6 +45,9 @@ function App() {
             setCartCount={setCartCount}
           ></Products>
         </Suspense>
+
+        <GetStarted></GetStarted>
+        <Pricing></Pricing>
       </main>
     </div>
   );
