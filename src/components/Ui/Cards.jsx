@@ -1,6 +1,9 @@
 import React from "react";
 import { FaCheck } from "react-icons/fa";
-const Cards = () => {
+
+const Cards = ({ data }) => {
+  console.log(data);
+
   return (
     <div className="card bg-base-100 w-[332px] shadow-sm p-[24]">
       <figure className="px-10 pt-10"></figure>

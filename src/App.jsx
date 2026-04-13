@@ -1,10 +1,18 @@
+import { Suspense } from "react";
 import "./App.css";
 import Banner from "./components/header/banner/Banner";
 import CounterRating from "./components/header/counter&rating/Counter&Rating";
 import Navbar from "./components/header/navbar/Navbar";
 import Products from "./components/main/productsLists/products/Products";
 
+const fetchPromise = async () => {
+  const res = await fetch("/public/productData.json");
+  return res.json();
+};
+
 function App() {
+  const productPromise = fetchPromise();
+
   return (
     <div className="font-display">
       <header>
@@ -21,8 +29,13 @@ function App() {
             to boost your productivity and creativity.
           </p>
         </div>
-
-        <Products></Products>
+        <Suspense
+          fallback={
+            <span className="loading loading-bars loading-xl flex  mx-auto mb-7"></span>
+          }
+        >
+          <Products productPromise={productPromise}></Products>
+        </Suspense>
       </main>
     </div>
   );
