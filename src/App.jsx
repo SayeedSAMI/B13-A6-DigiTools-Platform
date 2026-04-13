@@ -2,6 +2,7 @@ import "./App.css";
 import Banner from "./components/header/banner/Banner";
 import CounterRating from "./components/header/counter&rating/Counter&Rating";
 import Navbar from "./components/header/navbar/Navbar";
+import Products from "./components/main/productsLists/products/Products";
 
 function App() {
   return (
@@ -20,6 +21,9 @@ function App() {
             to boost your productivity and creativity.
           </p>
         </div>
+
+          <Products></Products>
+
       </main>
     </div>
   );
