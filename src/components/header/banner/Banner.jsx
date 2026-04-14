@@ -1,11 +1,12 @@
 import React from "react";
-
+import banner from "/banner.png";
+import play from "/Play.png";
 const Banner = () => {
   return (
     <div className="hero bg-base-200 min-h-[640px]  mx-auto">
       <div className="max-w-[1200px] hero-content flex-col lg:flex-row-reverse">
         <div className="card flex-1 bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
-          <img src="/src/assets/banner.png" alt="Banner Image " />
+          <img src={banner} alt="Banner Image " />
         </div>
 
         <div className="flex-1 text-center lg:text-left">
@@ -28,7 +29,7 @@ const Banner = () => {
               Explore Products
             </button>
             <button className="btn btn-outline btn-primary  bg-linear-to-r from-[#4F39F6] to-[#9514FA] bg-clip-text text-transparent  rounded-full">
-              <img src="/src/assets/Play.png" alt="Play Button" /> Watch Demo
+              <img src={play} alt="Play Button" /> Watch Demo
             </button>
           </div>
         </div>

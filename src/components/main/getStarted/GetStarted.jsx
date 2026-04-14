@@ -1,5 +1,7 @@
 import React from "react";
-
+import user from "/user.png";
+import rocket from "/rocket.png";
+import pak from "/package.png";
 const GetStarted = () => {
   return (
     <div className="bg-[#f9fafc] py-[120px] px-auto text-center">
@@ -14,11 +16,7 @@ const GetStarted = () => {
           </span>
 
           <figure className="px-10 pt-10">
-            <img
-              src="/src/assets/user.png"
-              alt="User Logo"
-              className="rounded-xl"
-            />
+            <img src={user} alt="User Logo" className="rounded-xl" />
           </figure>
           <div className="card-body items-center text-center">
             <h2 className="card-title">Create Account</h2>
@@ -37,11 +35,7 @@ const GetStarted = () => {
           </span>
 
           <figure className="px-10 pt-10">
-            <img
-              src="/src/assets/package.png"
-              alt="User Logo"
-              className="rounded-xl"
-            />
+            <img src={pak} alt="User Logo" className="rounded-xl" />
           </figure>
           <div className="card-body items-center text-center">
             <h2 className="card-title">Choose Products</h2>
@@ -57,11 +51,7 @@ const GetStarted = () => {
           </span>
 
           <figure className="px-10 pt-10">
-            <img
-              src="/src/assets/rocket.png"
-              alt="User Logo"
-              className="rounded-xl"
-            />
+            <img src={rocket} alt="rocket Logo" className="rounded-xl" />
           </figure>
           <div className="card-body items-center text-center">
             <h2 className="card-title">Start Creating</h2>

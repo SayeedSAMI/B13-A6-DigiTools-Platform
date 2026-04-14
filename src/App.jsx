@@ -11,7 +11,7 @@ import FooterSection from "./components/footer/FooterSection";
 import { ToastContainer } from "react-toastify";
 
 const fetchPromise = async () => {
-  const res = await fetch("/public/productData.json");
+  const res = await fetch("/productData.json");
   return res.json();
 };
 
