@@ -1,5 +1,6 @@
 import React from "react";
 import { FaCheck } from "react-icons/fa";
+import { toast } from "react-toastify";
 
 const Cards = ({
   data,
@@ -16,6 +17,7 @@ const Cards = ({
     const exists = cartList.find((item) => item.name === data.name);
 
     if (!exists) {
+
       const newCartCount = cartCount + 1;
       setCartCount(newCartCount);
 
@@ -24,6 +26,7 @@ const Cards = ({
       setCartList([...newCartList, data]);
       const newTotalPrice = totalPrice + data.price;
       setTotalPrice(newTotalPrice);
+      toast.success(`${data.name} added to cart`);
     }
   };
 

@@ -1,4 +1,5 @@
 import React from "react";
+import { toast } from "react-toastify";
 
 const Cart = ({
   cartList,
@@ -17,6 +18,9 @@ const Cart = ({
 
     const newTotalPrice = totalPrice - d.price;
     setTotalPrice(newTotalPrice);
+    toast.warning(`${d.name} is Removed`);
+
+    newCartCount === 0 ? toast.error("Cart is Empty") : "";
   };
 
   return (

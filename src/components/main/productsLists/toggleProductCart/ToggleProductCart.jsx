@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Cards from "../../../Ui/Cards";
 import Cart from "../cart/Cart";
+import { toast } from "react-toastify";
 
 const ToggleProductCart = ({
   productData,
@@ -53,7 +54,7 @@ const ToggleProductCart = ({
           </div>
           <button
             onClick={() => {
-              (setTotalPrice(0), setCartList([]), setCartCount(0));
+              (setTotalPrice(0), setCartList([]), setCartCount(0),toast.info("Checkout Completed"));
             }}
             className="btn  btn-block max-w-[900px]  bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white rounded-full"
           >

@@ -7,6 +7,8 @@ import Products from "./components/main/productsLists/products/Products";
 import GetStarted from "./components/main/getStarted/GetStarted";
 import Pricing from "./components/main/pricing/Pricing";
 import ReadytoTransform from "./components/main/ReadytoTransform/ReadytoTransform";
+import FooterSection from "./components/footer/FooterSection";
+import { ToastContainer } from "react-toastify";
 
 const fetchPromise = async () => {
   const res = await fetch("/public/productData.json");
@@ -51,6 +53,9 @@ function App() {
         <Pricing></Pricing>
         <ReadytoTransform></ReadytoTransform>
       </main>
+      <FooterSection> </FooterSection>
+
+       <ToastContainer />
     </div>
   );
 }
